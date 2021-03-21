@@ -223,3 +223,107 @@ span{
     float: left;
     padding: 10px;
 }
+
+#iletisim{
+    background: url(../images/iletisim.jpg);
+    background-size: cover;
+    padding: 50px;
+    height: auto;
+    text-align: center;
+}
+
+#h3iletisim{
+    color: #fff;
+}
+
+#iletisimopak{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px 20px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    height: 500px;
+}
+
+#formgrup{
+    width: 700px;
+    float: left;
+    height: 500px;
+    text-align: left;
+}
+
+#solform{
+    width: 50%;
+    float: left;
+    padding-right: 5px;
+}
+
+#sagform{
+    width: 50%;
+    float: right;
+    padding-left: 5px;
+}
+
+.formkontrol{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+textarea{
+    font-family: Arial;
+
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    background-color: #445c6e;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px 30px ;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#adres{
+    width: 450px;
+    float: right;
+    padding: 30px;
+    height: 500px;
+    text-align: left;
+}
+
+#adresbaslik{
+    font-size: 30px;
+    color: white;
+}
+
+.adresp{
+    color: #ddd;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+#copyright{
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+#up{
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 9px 12px;
+    margin-top: 25px;
+}
