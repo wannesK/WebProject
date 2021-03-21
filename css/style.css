@@ -36,3 +36,23 @@ nav a:visited{
     margin-right: 7px;
     font-size: 16px;
 }
+#anasayfa{
+    background-image: url("../images/backGround.jpeg");
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    height: 800px;   
+}
+#black{
+    height: 800px;
+    background-color: black;
+    opacity: 0.5;
+}
+#icerik{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50% , -50%);
+    color: white;
+    font-size: 20px;
+}
