@@ -44,6 +44,7 @@ nav a:visited{
     margin-right: 7px;
     font-size: 16px;
 }
+
 #anasayfa{
     background-image: url("../images/backGround.jpeg");
     background-size: cover;
@@ -170,4 +171,55 @@ span{
 
 .card:hover{
     border: 1px solid gray;
+}
+
+#ekip{
+    background-color: #003666;
+    padding: 50px;
+    height: 850px;
+    text-align: center;
+}
+
+#ekiph3{
+    color:#fff;
+}
+
+.sutun-sol-sag{
+    width: 385px;
+    float: left;
+    padding: 50px;
+}
+
+.oval{
+    border-radius: 50%;
+}
+
+.ekipisim{
+    color : #fff;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.ekipp{
+    color: #888;
+    font-size: 17px;
+}
+
+.social{
+    color: #fff;
+    border: 1px solid white;
+    padding: 10px;
+    width: 50px;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.social:hover{
+    background-color: #888;
+}
+
+.sutun{
+    width: 385px;
+    float: left;
+    padding: 10px;
 }
