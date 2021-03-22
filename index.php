@@ -18,10 +18,10 @@
         <div id="logo">Wannes Games</div>
         <nav>
             <a href=""><i class="fas fa-home icon"></i>Anasayfa</a>
-            <a href=""><i class="fas fa-info icon"></i>Hakkımızda</a>
-            <a href=""><i class="fas fa-mobile icon"></i>Oyunlarımız</a>
-            <a href=""><i class="fas fa-users icon"></i>Ekip</a>
-            <a href=""><i class="fas fa-map-pin icon"></i>İletişim</a>
+            <a href="#hakkimizda"><i class="fas fa-info icon"></i>Hakkımızda</a>
+            <a href="#oyunlar"><i class="fas fa-mobile icon"></i>Oyunlarımız</a>
+            <a href="#ekip"><i class="fas fa-users icon"></i>Ekip</a>
+            <a href="#iletisim"><i class="fas fa-map-pin icon"></i>İletişim</a>
         </nav>
     </section>
 
@@ -31,8 +31,10 @@
         </div>
         <div id="icerik">
             <h2> Biz Kimiz ? </h2>
-            <hr = width="300" align= left>
-            <p> Unity oyun motoru ile oyun geliştiriyoruz! </p>          
+            <hr width ="300" align =left>
+            <p> Unity oyun motoru ile oyun geliştiriyoruz! </p>
+            <p> Eğer sende oyun yaptırmak istersen </p>   
+            <p> Bizimle hemen iletişime geç! </p> 
         </div>
     </section>
 
@@ -41,19 +43,23 @@
 
         <div class="container">
             <div id="sol">
-                <h5 id="h5sol">Lorem ipsum, dolor sit amet consectetur
+                <h5 id="h5sol"> Oyunlarla hayata renk katıyoruz!
                 </h5>
             </div>
 
             <div id="sag">
-                <span>L</span>
-                <p id="psag">orem ipsum dolor sit, amet consectetur adipisicing elit. Culpa quaerat nisi minima molestiae laboriosam expedita voluptatibus autem tenetur, libero quisquam assumenda dicta, sequi accusamus hic, ad quidem a magnam eos?                    
+                <span>M</span>
+                <p id="psag">aceramız 2020 yılında, benzersiz mobil oyun deneyimleri yaratma hayali ile başladı. 
+                    Edindiğimiz tecrübeler ve veriye dayalı yaklaşımımızla geliştirdiğimiz oyunları milyonlarca insana ulaştırmaya devam ediyoruz.                    
                 </p>
             </div>
 
             <img src="images/about.jpg" alt=""
             class="img-fluid mt100">
-            <p id="pson">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente maiores pariatur vero eum cumque quia nobis repellat expedita alias unde, odit fugit dolorum corporis id non ducimus molestias iste voluptatum.</p>
+            <p id="pson">
+                Hayallerinin peşinden koşmak için, genç ve dinamik ekibimizin bir parçası olmak ister misin?
+                Bizimle hemen iletişime geç !
+            </p>
         </div>
     </section>
 
@@ -65,7 +71,7 @@
                 <div class="card">
                     <img src="images/LittleKnight.png" alt="" class="img-fluid">
                     <h5 class="baslikcard">Little Knight</h5>
-                    <p class="cardp">Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    <p class="cardp">Platform tabanlı macera oyunu olan little knight yayınladığım ilk oyun.
                     </p>
                 </div>              
             </div>
@@ -81,7 +87,7 @@
                 <img src="images/profil.jpg" alt="" class="img-fluid oval">
                 <h4 class="ekipisim">Ad Soyad</h4>
 
-                <p class="ekipp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, libero.                
+                <p class="ekipp">Kişi açıklaması.               
                 </p>
 
                 <div class="ekip-icon">
@@ -95,7 +101,7 @@
                 <img src="images/profil.jpg" alt="" class="img-fluid oval">
                 <h4 class="ekipisim">Yasin Kağan Kaya</h4>
 
-                <p class="ekipp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, libero.                
+                <p class="ekipp">Kişi açıklaması.                 
                 </p>
 
                 <div class="ekip-icon">
@@ -109,7 +115,7 @@
                 <img src="images/profil.jpg" alt="" class="img-fluid oval">
                 <h4 class="ekipisim">Ad Soyad</h4>
 
-                <p class="ekipp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, libero.                
+                <p class="ekipp">Kişi açıklaması.                
                 </p>
 
                 <div class="ekip-icon">
@@ -125,7 +131,7 @@
     <section id="iletisim">
         <div class="container">
             <h3 id="h3iletisim">İletişim</h3>
-
+            <form action="index.php" method="post">
             <div id="iletisimopak">
                 <div id="formgrup"> 
                     <div id="solform">
@@ -146,11 +152,13 @@
                     <h4 id="adresbaslik">Adres : </h4>
                     <p class="adresp">Topçu Mahallesi</p>
                     <p class="adresp">1558.cadde 1559.sokak</p>
+                    <p class="adresp">Ankara Etimesgut Elvankent</p>
                     <p class="adresp">Email : wannes.kagan@gmail.com</p>
                 </div>
 
                 </div>
             </div>
+            </form>
 
             <footer>
                 <div id="copyright">2021 | Tüm hakları saklıdır                    
@@ -169,3 +177,25 @@
     </section>
 </body>
 </html>
+
+<?php
+
+include("baglanti.php");
+
+if (isset($_POST["isim"], $_POST["tel"], $_POST["mail"], $_POST["konu"], $_POST["mesaj"])) 
+{
+    $adsoyad = $_POST["isim"];
+    $telefon = $_POST["tel"];
+    $email = $_POST["mail"];
+    $konu = $_POST["konu"];
+    $mesaj = $_POST["mesaj"];
+
+    $ekle = "INSERT INTO iletisim (adsoyad, telefon, email, konu, mesaj) VALUES ('".$adsoyad."', '".$telefon."', '".$email."', '".$konu."', '".$mesaj."')";
+
+    if ($baglan-> query($ekle) === TRUE) 
+    {
+        echo "<script> alert('Mesaj Başarılı Şekilde İletildi !')</script>";
+    }
+}
+
+?>

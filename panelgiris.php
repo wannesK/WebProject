@@ -51,7 +51,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 <body>
 
-<form action="panelgiris.html" method="POST" style="max-width:500px;margin:auto">
+<form action="panelgiris.php" method="post" style="max-width:500px;margin:auto">
   <h2>Panel Girişi</h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
@@ -68,3 +68,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 </body>
 </html>
+
+<?php
+
+session_start();
+
+if (isset($_POST["usrnm"], $_POST["psw"])) 
+{
+  if ($_POST["usrnm"] == "kagan" && $_POST["psw"] == "123") 
+  {
+    $_SESSION["user"] = $_POST["usrnm"];
+    header("location:panel.php");
+  }
+  else 
+  {
+    echo "<script> alert('Kullanıcı Adı veya Şifre Hatalı !')</script>";
+  }
+
+}
+
+?>
